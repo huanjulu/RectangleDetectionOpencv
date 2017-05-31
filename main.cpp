@@ -198,7 +198,7 @@ void main(JNIEnv *, jobject, jlong addrGray,jlong addrRgba) {
     vector<vector<Point> > squares;
     Mat newImage = image.clone();
 
-    float scale = 0.;
+    float scale = 0.25;
     resize(image, newImage, Size(), scale, scale);
     findSquares(newImage, squares, scale);
     drawSquares(image, squares);
